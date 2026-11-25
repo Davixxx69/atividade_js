@@ -69,7 +69,17 @@ console.log('Compra: R$ ' + valorCompra.toFixed(2) + ' | Desconto: R$ ' + valorD
 console.log("--- Atividade 2: Validador de Acesso ---");
 
 // TODO: Escreva seu código da Atividade 2 abaixo:
+const usuarioLogado = true;
+const idadeUsuario = 20;
+const perfilUsuario = "ADMIN";
 
+var temPermissao = (perfilUsuario == "ADMIN" || perfilUsuario == "GERENTE");
+
+if (usuarioLogado && idadeUsuario >= 18 && temPermissao) {
+    console.log("🔓 Acesso Autorizado ao Painel Administrativo!");
+} else {
+    console.log("🔒 Acesso Negado: Credenciais ou idade insuficientes.");
+}
 
 
 
