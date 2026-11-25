@@ -32,15 +32,17 @@ const valorCompra = 250.00;
 let porcentagemDesconto = 0;
 if (valorCompra <= 100.00) {
     console.log("sem desconto");
-} else if (valorCompra > 100.00 < 300.00) {
+} else if (valorCompra > 100.00 && valorCompra <= 300.00) {
     porcentagemDesconto = valorCompra * (0.10 / 100)
     console.log("10% de desconto");
 } else {
     porcentagemDesconto = valorCompra * (0.15 / 100)
     console.log("15% de desconto")
 }
-valorDesconto = (valorCompra * porcentagemDesconto);
+const valorDesconto = (valorCompra * porcentagemDesconto);
 
+const valorFinal = (valorCompra - valorDesconto);
+console.log('Compra: R$ ' + valorCompra.toFixed(2) + ' | Desconto: R$ ' + valorDesconto.toFixed(2) + ' (' + (porcentagemDesconto * 100).toFixed(0) + '%) | Total a Pagar: R$ ' + valorFinal.toFixed(2));
 
 
 
