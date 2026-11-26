@@ -103,10 +103,24 @@ if (usuarioLogado && idadeUsuario >= 18 && temPermissao) {
 console.log("--- Atividade 3: Rastreamento com Switch ---");
 
 // TODO: Escreva seu código da Atividade 3 abaixo:
+const statusPedido = "ENVIADO";
 
-
-
-
+switch (statusPedido) {
+    case "CRIADO":
+        console.log("📝 Pedido recebido! Aguardando confirmação de pagamento.");
+        break;
+    case "PAGO":
+        console.log("💳 Pagamento confirmado! Produto sendo embalado.");
+        break;
+    case "ENVIADO":
+        console.log("🚚 Pedido em transporte! A caminho do seu endereço.");
+        break;
+    case "ENTREGUE":
+        console.log("📦 Pedido entregue com sucesso! Aproveite sua compra.");
+        break;
+    default:
+        console.log("❓ Status desconhecido. Por favor, contate o suporte.");
+}
 
 // =============================================================================
 // ATIVIDADE 4: PAR/ÍMPAR E ESTOQUE COM OPERADOR TERNÁRIO (? :)
@@ -129,9 +143,12 @@ console.log("--- Atividade 3: Rastreamento com Switch ---");
 console.log("--- Atividade 4: Operador Ternário & Módulo ---");
 
 // TODO: Escreva seu código da Atividade 4 abaixo:
+const numero = 18;
+const tipoNumero = (numero % 2 === 0) ? "PAR" : "ÍMPAR";
+console.log(`O número ${numero} é classificado como ${tipoNumero}.`);
 
-
-
-
+const quantidadeEstoque = 0;
+const avisoEstoque = (quantidadeEstoque > 0) ? "✅ Em Estoque" : "❌ Esgotado";
+console.log(`Disponibilidade do Produto: ${avisoEstoque}`);
 
 console.log("=== FIM DA ATIVIDADE 20 ===");
